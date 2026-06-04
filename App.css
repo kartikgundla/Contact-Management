@@ -1,0 +1,345 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f0f2f8;
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+.sub-nav {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: #ffffff;
+  border-bottom: 1px solid #e8eaf2;
+  display: flex;
+  gap: 8px;
+  padding: 10px 48px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  /* justify-content: center; */  
+}
+
+.sub-nav a {
+  color: #5a6099;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;  
+}
+
+.sub-nav a:hover {
+  background: #f0f2ff;
+  color: #4f6ef7;
+}
+
+/* update this — was 92px, now needs more space for two bars */
+.ui.container {
+  padding: 130px 24px 48px;
+}
+.ui.fixed.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #1a1a2e;
+  padding: 0 32px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.ui.fixed.menu .ui.container.center {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.ui.fixed.menu h1 {
+  font-family: 'DM Serif Display', serif;
+  color: #fff;
+  font-size: 36px;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  text-align: center  ;
+}
+
+.ui.fixed.menu a {
+  color: #a8b4d8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: background 0.18s, color 0.18s;
+}
+
+.ui.fixed.menu a:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+/* ── Page container ── */
+.ui.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 88px 20px 40px;
+}
+
+/* ── Contact list ── */
+.ui.celled.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ui.celled.list .item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e8eaf2;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  transition: box-shadow 0.18s, border-color 0.18s, transform 0.15s;
+}
+
+.ui.celled.list .item:hover {
+  box-shadow: 0 4px 16px rgba(26,26,46,0.10);
+  border-color: #c5cbe8;
+  transform: translateY(-1px);
+}
+
+.ui.celled.list .content {
+  flex: 1;
+  min-width: 0;
+}
+
+.ui.celled.list .header {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a2e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ui.celled.list .item > div:not(.content) {
+  font-size: 13px;
+  color: #7a8099;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Avatar ── */
+.ui.avatar.image {
+  width: 46px !important;
+  height: 46px !important;
+  border-radius: 50% !important;
+  flex-shrink: 0;
+}
+
+/* ── Delete icon ── */
+.delete-icon {
+  width: 18px;
+  height: 18px;
+  fill: #d0d4e8;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: fill 0.18s, transform 0.15s;
+}
+
+.delete-icon:hover {
+  fill: #e74c3c;
+  transform: scale(1.15);
+}
+
+/* ── Add contact form ── */
+.ui.main {
+  max-width: 480px;
+  margin: 70px;
+  padding: 32px 36px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e8eaf2;
+  box-shadow: 0 4px 24px rgba(26,26,46,0.08);
+}
+
+.ui.main h2 {
+  font-family: 'DM Serif Display', serif;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  color: #1a1a2e;
+  margin-bottom: 28px;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #7a8099;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.field input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #e8eaf2;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  color: #1a1a2e;
+  background: #f8f9fd;
+  transition: border-color 0.18s, box-shadow 0.18s, background 0.18s;
+  outline: none;
+}
+
+.field input:focus {
+  border-color: #4f6ef7;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(79,110,247,0.12);
+}
+
+.field input::placeholder {
+  color: #b0b6cc;
+}
+
+/* ── Button ── */
+.ui.button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  background: linear-gradient(135deg, #4f6ef7 0%, #764af1 100%);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 6px;
+  letter-spacing: 0.03em;
+  transition: opacity 0.18s, transform 0.15s, box-shadow 0.18s;
+  box-shadow: 0 4px 14px rgba(79,110,247,0.30);
+}
+
+.ui.button:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(79,110,247,0.38);
+}
+
+.ui.button:active {
+  transform: scale(0.98);
+}
+
+ .empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 200px);
+  text-align: center;
+}
+
+.empty-state svg {
+  width: 48px;
+  height: 48px;
+  fill: #d0d4e8;
+  margin-bottom: 12px;
+}
+
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.page-heading h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: #1a1a2e;
+}
+.page-heading span {
+  font-size: 13px;
+  color: #9099b8;
+  background: #e8eaf2;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.contact-email {
+  font-size: 13px;
+  color: #7a8099;
+}
+
+
+
+.ui.search {
+  margin-bottom: 16px;
+}
+
+.ui.search .ui.icon.input {
+  width: 100%;
+  position: relative;
+}
+
+.ui.search .ui.icon.input input {
+  width: 100%;
+  padding: 11px 16px 11px 42px;
+  border: 1.5px solid #e8eaf2;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  color: #1a1a2e;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.ui.search .ui.icon.input input:focus {
+  border-color: #4f6ef7;
+  box-shadow: 0 0 0 3px rgba(79,110,247,0.12);
+}
+
+.ui.search .ui.icon.input input::placeholder {
+  color: #c0c6d8;
+}
+
+.ui.search .ui.icon.input i.search.icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #c0c6d8;
+  font-size: 15px;
+  pointer-events: none;
+}
+ 
