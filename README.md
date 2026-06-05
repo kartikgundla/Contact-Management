@@ -19,7 +19,7 @@ A React-based contact manager app that lets you add, search, and delete contacts
 - Vite (dev server)
 
 ## Project Structure
-
+```
 src/
 ├── components/
 │   ├── App.jsx          # root component, holds all state
@@ -29,7 +29,7 @@ src/
 │   └── AddContact.jsx   # add contact form
 ├── App.css              # all styles
 └── main.jsx             # entry point
-
+```
 ## Getting Started
 
 ### 1. Clone the repo
