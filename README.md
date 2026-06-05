@@ -33,7 +33,7 @@ src/
 ## Getting Started
 
 ### 1. Clone the repo
-git clone https://github.com/karitkgundla/contact-manager.git
+git clone https://github.com/kartikgundla/contact-manager.git
 
 ### 2. Install dependencies
 npm install
